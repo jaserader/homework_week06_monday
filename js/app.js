@@ -2,22 +2,22 @@ var Blog = Backbone.Model.extend({
   url: "http://tiny-starburst.herokuapp.com/collections/posts"
 });
 
-var Blogs = Backbone.Collection.extend({
-  url: "http://tiny-starburst.herokuapp.com/collections/posts"
-});
+// var Blogs = Backbone.Collection.extend({
+//   url: "http://tiny-starburst.herokuapp.com/collections/posts"
+// });
 
 var Person = Backbone.Model.extend({
   url: "http://tiny-starburst.herokuapp.com/collections/people"
 });
 
-var Peoples = Backbone.Collection.extend({
-  url: "http://tiny-starburst.herokuapp.com/collections/people"
-});
+// var Peoples = Backbone.Collection.extend({
+//   url: "http://tiny-starburst.herokuapp.com/collections/people"
+// });
 
 ////////////////////////////////////////////////////////////////////////////////
 
 var BlogView = Backbone.View.extend({
-  tagname: "section",
+  tagname: "form",
   template: _.template($('#blogInputTemplate').html()),
 
   events: {
@@ -49,7 +49,7 @@ var ContactView = Backbone.View.extend({
   },
 
   send: function(){
-    var submit = this.$('#blogSubmitBtn').val();
+    var submit = this.$('#contactSubmitBtn').val();
       console.log('click');
 
     var firstName = this.$("#firstName").val();
@@ -83,11 +83,11 @@ var ContactView = Backbone.View.extend({
 var BlogRouter = Backbone.Router.extend({
 
   routes: {
-    "": "blogEntry",
+    "": "blogsEntry",
     "page2": "personEntry"
   },
 
-  blogEntry: function (){
+  blogsEntry: function (){
     var view = new BlogView();
     view.render();
     $('#mainArea').html(view.$el);
