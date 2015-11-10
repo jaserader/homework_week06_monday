@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+
+      <header>
+        <nav>
+          <a href="#">Page1</a>
+          <a href="#page2">Page2</a>
+          <a href="#">Page3</a>
+          <a href="#">Page4</a>
+          <a href="#">Page5</a>
+        </nav>
+      </header>
+
+      <main id="mainArea"></main>
+
+      <script id="blogInputTemplate" type="text/template">
+        <input id="blogTitle" type="text" name="title" value="" placeholder="title">
+        <input id="blogContent" type="text" name="blog" value="" placeholder="blog here...">
+        <input id="blogSubmitBtn" type="button" name="submit" value="Submit">
+
+      </script>
+
+      <script id="peopleTemplate" type="text/template">
+        <span>First Name: </span>
+          <input id="firstName" type="text" name="first name" value="">
+        <span>Last Name: </span>
+          <input id="lastName" type="text" name="last name" value="" >
+        <span>Address: </span>
+          <input id="address" type="text" name="address" value="">
+        <span>Phone Number: </span>
+          <input id="phoneNumber" type="text" name="phone number" value="" >
+        <input id="contactSubmitBtn" type="button" name="submit" value="Submit">
+
+      </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/3.10.1/lodash.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.2.3/backbone-min.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>
